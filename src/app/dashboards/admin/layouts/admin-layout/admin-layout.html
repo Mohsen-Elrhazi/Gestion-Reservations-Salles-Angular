@@ -26,35 +26,62 @@
   </div>
 </div> -->
 
-<mat-sidenav-container class="h-screen w-screen">
-
-  <!-- SIDEBAR -->
+<!-- <mat-sidenav-container class="h-screen w-screen">
+  SIDEBAR
   <mat-sidenav mode="side" opened class="w-64 bg-gray-900 text-white">
-
-    <div class="p-4 text-lg font-semibold border-b border-gray-700">
-      Admin
-    </div>
+    <div class="p-4 text-lg font-semibold border-b border-gray-700">Admin</div>
 
     <mat-nav-list>
       <a mat-list-item routerLink="home" class="text-white hover:bg-gray-800">Home</a>
       <a mat-list-item routerLink="employes" class="text-white hover:bg-gray-800">Employes</a>
     </mat-nav-list>
-
   </mat-sidenav>
 
-  <!-- CONTENT -->
-  <mat-sidenav-content class="flex flex-col h-screen">
-
-    <!-- HEADER FIXE -->
-    <mat-toolbar color="primary" class="flex justify-between flex-shrink-0">
+  CONTENT
+  <mat-sidenav-content class="flex flex-col h-screen ">
+    HEADER FIXE
+    <mat-toolbar color="primary" class=" h-14 justify-between flex-shrink-0 fixed ">
       <span>Admin Dashboard</span>
     </mat-toolbar>
 
-    <!-- MAIN CONTENT SCROLLABLE -->
-    <div class="flex-1 overflow-auto p-6 bg-gray-100">
+    MAIN CONTENT SCROLLABLE
+    <div class=" flex-1 overflow-auto p-12 bg-gray-100 mt-6">
       <router-outlet></router-outlet>
     </div>
-
   </mat-sidenav-content>
+</mat-sidenav-container> -->
 
-</mat-sidenav-container>
+<!-- Sidebar -->
+    <div class="sidebar bg-dark shadow-sm">
+        <div class="text-white fs-4 fw-bold px-4 py-3 border-bottom border-secondary">
+            Dashboard
+        </div>
+        <nav class="nav flex-column mt-3">
+            <button class="nav-link text-white px-4 py-2" routerLink="/admin/home">Accueil</button>
+            <button class="nav-link text-white px-4 py-2" routerLink="/admin/employes">Employes</button>
+
+        </nav>
+    </div>
+
+    <!-- Header -->
+    <div class="header bg-white border-bottom shadow-sm d-flex align-items-center justify-content-between px-4">
+        <div class="flex-grow-1" style="max-width: 500px;">
+            <input type="text" class="form-control rounded-pill bg-light border-0" placeholder="Rechercher...">
+        </div>
+        <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                Menu
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                <li><a class="dropdown-item" href="#">Mon profil</a></li>
+                <li><a class="dropdown-item" href="#">Paramètres</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Déconnexion</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content bg-light p-4">
+      <router-outlet></router-outlet>
+    </div>

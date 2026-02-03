@@ -1,0 +1,42 @@
+body {
+            overflow: hidden;
+        }
+        
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 260px;
+            overflow-y: auto;
+        }
+        
+        .header {
+            position: fixed;
+            top: 0;
+            left: 260px;
+            right: 0;
+            height: 70px;
+            z-index: 999;
+        }
+        
+        .main-content {
+            position: fixed;
+            top: 70px;
+            left: 260px;
+            right: 0;
+            bottom: 0;
+            overflow-y: auto;
+        }
+        
+        @media (max-width: 768px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+            .header {
+                left: 0;
+            }
+            .main-content {
+                left: 0;
+            }
+        }
