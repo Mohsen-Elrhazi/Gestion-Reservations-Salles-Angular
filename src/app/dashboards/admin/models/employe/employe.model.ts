@@ -4,11 +4,10 @@ export interface Employe {
     email: string;
     actif: boolean;
     role: string;
-    // motDePasse: string;
 }
 
-export interface ApiResponse {
-  status: string;
-  message: string;
-  data: Employe[];
-}
+// export interface ApiResponse {
+//   status: string;
+//   message: string;
+//   data: Employe[];
+// }

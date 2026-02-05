@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 import { AdminLayout } from './layouts/admin-layout/admin-layout';
 import { Home } from './pages/home/home';
-import { Employes } from './pages/employes/employes';
+import { EmployeComponent } from './pages/employe/employe.component';
 
 export const adminRoutes: Routes = [
   {
@@ -19,7 +19,7 @@ export const adminRoutes: Routes = [
       },
       {
         path: 'employes',
-        component: Employes,
+        component: EmployeComponent,
       },
     ],
   },
