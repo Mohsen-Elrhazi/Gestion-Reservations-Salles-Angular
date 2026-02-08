@@ -6,7 +6,7 @@ import { SalleComponent } from './pages/salle/salle.component';
 import { ReservationComponent } from './pages/reservation/reservation.component';
 import { EquipementComponent } from './pages/equipement/equipement.component';
 
-export const adminRoutes: Routes = [
+export const AdMIN_ROUTES: Routes = [
   {
     path: '',
     component: AdminLayoutComponent,

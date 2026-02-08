@@ -40,9 +40,9 @@ export class EmployeComponent implements OnInit {
     this.employeService.createEmploye(this.newEmploye).subscribe({
       next: (response) => {
         console.log('employé crée: ', response.data);
-        this.newEmploye={nom: '', email: '', motDePasse: ''};
+        this.newEmploye = { nom: '', email: '', motDePasse: '' };
         this.loadEmployes();
-         const closeBtn= document.getElementById('btnCloseModal');
+        const closeBtn = document.getElementById('btnCloseModal');
         closeBtn?.click();
       },
     });

@@ -4,7 +4,7 @@ import { EmployeLayoutComponent } from './layouts/employe-layout/employe-layout.
 import { HomeComponent } from '../admin/pages/home/home.component';
 import { ReservationComponent } from './pages/reservation/reservation.component';
 
-export const Employe_Routes: Routes = [
+export const EMPLOYE_ROUTES: Routes = [
   {
     path: '',
     component: EmployeLayoutComponent,

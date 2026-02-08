@@ -7,11 +7,12 @@ export const routes: Routes = [
   {
     path: 'admin',
     // canActivate: [authGuard],
-    loadChildren: () => import('./dashboards/admin/admin.routes').then((m) => m.adminRoutes),
+    loadChildren: () => import('./dashboards/admin/admin.routes').then((m) => m.AdMIN_ROUTES),
+    // data: { role: 'Admin' }
   },
   {
     path: 'employe',
     // canActivate: [authGuard],
-    loadChildren: () => import('./dashboards/employe/employe.routes').then((m) => m.Employe_Routes),
+    loadChildren: () => import('./dashboards/employe/employe.routes').then((m) => m.EMPLOYE_ROUTES),
   },
 ];
